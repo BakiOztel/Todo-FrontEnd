@@ -1,19 +1,9 @@
-# deneme2
+# TodoApp 
+I designed an interface using [vue.js](https://vuejs.org/) for the web api I made for my internship.
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### Libraries
+- [vue.js](https://vuejs.org/)
+- [vuex](https://vuex.vuejs.org/)
+- [axios](https://axios-http.com/docs/intro) 
+- [vuetify](https://vuetifyjs.com/en/)
