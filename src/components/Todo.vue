@@ -1,18 +1,18 @@
 <template>
-   <v-container class="w-100 todo-con">
+   <v-container :class="{'finish_todo' : items.isDone ==true}"  class="w-100 todo_con">
         <v-row>
             <v-col md="8">
-            <div >
-                {{ items.text }}
-            </div>
-        </v-col>
-            <v-col  md="2">
+                <div >
+                    {{ items.text }}
+                </div>
+            </v-col>    
+            <v-col v-if="!items.isDone"  md="2">
                 <v-btn @click="DeletTodo(items.id)" color="red" icon="mdi-cancel" >
-            </v-btn>
-        </v-col>
-        <v-col md="2">
-            <Popup :item="items" />
-        </v-col>
+                 </v-btn>
+             </v-col>
+            <v-col v-if="!items.isDone" md="2">
+                <Popup :item="items" />
+            </v-col>
         </v-row>
    </v-container>
   </template>
@@ -42,8 +42,13 @@ export default {
 </script>
 
 <style scoped>
-.todo-con{
+.todo_con{
     border-bottom: solid gray;
+    min-height: 70px;
 }
+.finish_todo{
+    text-decoration-line: line-through; 
+}
+
 </style>
 
